@@ -1,0 +1,65 @@
+name: Spine_Leaf_topo
+
+topology:
+  kinds:
+    ceos:
+      image: ceos:4.34.4M
+
+
+
+  nodes:
+
+  ###Spine1###
+    Spine1:
+      kind: ceos
+      group: spine
+      ports:
+        - "2011:22"
+  ###Spine2###      
+    Spine2:
+      kind: ceos
+      group: spine
+      ports:
+        - "2012:22"
+  
+
+  ###Leaf1###
+    Leaf1:
+      kind: ceos
+      group: leaf
+      ports:
+        - "2013:22"
+  ###Leaf2###
+    Leaf2:
+      kind: ceos
+      group: leaf
+      ports:
+        - "2014:22"
+  ###Leaf3#
+    Leaf3:
+      kind: ceos
+      group: leaf
+      ports:
+        - "2015:22"
+  ###Leaf4##
+    Leaf4:
+      kind: ceos
+      group: leaf
+      ports:
+        - "2016:22"
+
+
+  links:
+
+  #Leaf -> Spine
+    - endpoints: ["Leaf1:eth3","Spine1:eth1"]
+    - endpoints: ["Leaf1:eth4","Spine2:eth1"]
+
+    - endpoints: ["Leaf2:eth3","Spine1:eth2"]
+    - endpoints: ["Leaf2:eth4","Spine2:eth2"]
+
+    - endpoints: ["Leaf3:eth3","Spine1:eth3"]
+    - endpoints: ["Leaf3:eth4","Spine2:eth3"]
+
+    - endpoints: ["Leaf4:eth3","Spine1:eth4"]
+    - endpoints: ["Leaf4:eth4","Spine2:eth4"]
