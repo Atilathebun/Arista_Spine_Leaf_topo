@@ -66,3 +66,12 @@ topology:
 
   #Spine -> Spine
     - endpoints: ["Spine1:eth5","Spine2:eth5"]
+    - endpoints: ["Spine1:eth6","Spine2:eth6"]
+
+  #Leaf1 -> Leaf2
+    - endpoints: ["Leaf1:eth25","Leaf2:eth25"]
+    - endpoints: ["Leaf1:eth26","Leaf2:eth26"]
+
+  #Leaf3 -> Leaf4
+    - endpoints: ["Leaf3:eth25","Leaf3:eth25"]
+    - endpoints: ["Leaf4:eth26","Leaf4:eth26"]    
