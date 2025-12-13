@@ -5,20 +5,20 @@ topology:
     ceos:
       image: ceos:4.34.4M
 
-
-
   nodes:
 
   ###Spine1###
     Spine1:
       kind: ceos
       group: spine
+      mgmt-ipv4: 172.20.20.10
       ports:
         - "2011:22"
   ###Spine2###      
     Spine2:
       kind: ceos
       group: spine
+      mgmt-ipv4: 172.20.20.20
       ports:
         - "2012:22"
   
@@ -27,24 +27,28 @@ topology:
     Leaf1:
       kind: ceos
       group: leaf
+      mgmt-ipv4: 172.20.20.30
       ports:
         - "2013:22"
   ###Leaf2###
     Leaf2:
       kind: ceos
       group: leaf
+      mgmt-ipv4: 172.20.20.40
       ports:
         - "2014:22"
   ###Leaf3#
     Leaf3:
       kind: ceos
       group: leaf
+      mgmt-ipv4: 172.20.20.50
       ports:
         - "2015:22"
   ###Leaf4##
     Leaf4:
       kind: ceos
       group: leaf
+      mgmt-ipv4: 172.20.20.60
       ports:
         - "2016:22"
 
@@ -73,5 +77,5 @@ topology:
     - endpoints: ["Leaf1:eth26","Leaf2:eth26"]
 
   #Leaf3 -> Leaf4
-    - endpoints: ["Leaf3:eth25","Leaf3:eth25"]
-    - endpoints: ["Leaf4:eth26","Leaf4:eth26"]    
+    - endpoints: ["Leaf3:eth25","Leaf4:eth25"]
+    - endpoints: ["Leaf3:eth26","Leaf4:eth26"]    
