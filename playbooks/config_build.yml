@@ -5,6 +5,6 @@
 
   - name: Create configs
     template:
-      src: "/home/emertz/Repos/Arista_Spine_Leaf_topo/scripts/portconfig.j2"
-      dest: "/home/emertz/Repos/Arista_Spine_Leaf_topo/configs/{{inventory_hostname}}_config.cfg"
+      src: "Arista_Spine_Leaf_topo/scripts/portconfig.j2"
+      dest: "Arista_Spine_Leaf_topo/configs/{{inventory_hostname}}_config.cfg"
     delegate_to: localhost
