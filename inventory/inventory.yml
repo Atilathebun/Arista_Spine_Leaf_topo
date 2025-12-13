@@ -1,0 +1,8 @@
+SPINE_LEAF_FABRIC:
+  children:
+    Spines:
+      hosts:
+        spine1:
+          ansible_host: 172.20.20.10
+        spine2:
+          ansible_host: 172.20.20.20

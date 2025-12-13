@@ -12,6 +12,7 @@ topology:
       kind: ceos
       group: spine
       mgmt-ipv4: 172.20.20.10
+      startup-config: configs/spine1_config.cfg
       ports:
         - "2011:22"
   ###Spine2###      

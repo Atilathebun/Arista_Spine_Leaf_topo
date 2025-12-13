@@ -1,0 +1,4 @@
+---
+- hosts: spine1
+  gather_facts: false
+  tasks:

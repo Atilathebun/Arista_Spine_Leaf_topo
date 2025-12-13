@@ -1,0 +1,4 @@
+interfaces:
+  Ethernet1:
+    descr: "Trunk Port"
+    mode: "trunk"
